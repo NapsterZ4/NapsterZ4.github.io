@@ -29,9 +29,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="file.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/demo_examen/file.html" useBuiltInWebServerPort="true">
@@ -60,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603417707423</updated>
       <workItem from="1603417708529" duration="3065000" />
-      <workItem from="1603494245698" duration="5732000" />
+      <workItem from="1603494245698" duration="12606000" />
     </task>
     <servers />
   </component>
@@ -68,6 +75,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="721" y="337" width="467" height="439" key="#Web_Browsers" timestamp="1603506985935">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="721" y="337" width="467" height="439" key="#Web_Browsers/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1603506985935" />
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603506989863">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1603506989863" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1603499293635">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

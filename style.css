@@ -1,9 +1,26 @@
-body {
-    padding: 20px;
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .toggleButton{
     padding: 10px;
+    margin-top: 15%;
     background: rgb(161, 161, 155);
     color: white;
     display: inline;
@@ -21,7 +38,6 @@ body {
     padding: 10px;
     background: rgb(245, 147, 20);
     color: white;
-    display: inline;
 }
 
 video{
@@ -35,6 +51,10 @@ video{
     width: 500px;
     border-bottom: 3px solid #6868ce;
     box-shadow: 0 2px 3px 0;
+}
+
+.videobox{
+    margin-top: 4%;
 }
 
 .alphabets{
@@ -51,5 +71,5 @@ video{
 
 .BigLetter{
     color: red;
-    font-size: 10vh;
+    font-size: 5vh;
 }

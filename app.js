@@ -1,5 +1,5 @@
 const video = document.getElementById('video');
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('Mycanvas');
 const context = canvas.getContext('2d');
 
 let toggleButton = document.getElementById('toggleButton');
