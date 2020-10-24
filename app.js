@@ -49,20 +49,30 @@ function startVideo(){
 function rundetection(){
     model.detect(video).then(predictions => {
         model.renderPredictions(predictions, canvas, context, video);
-        document.getElementById('salud').classList.remove('BigLetter');
-        document.getElementById('tramites').classList.remove('BigLetter');
-        document.getElementById('informacion').classList.remove('BigLetter');
+        document.getElementById('salud').innerHTML = "SALUD";
+        document.getElementById('tramites').innerHTML = "TRÁMITES";
+        document.getElementById('informacion').innerHTML = "INFORMACIÓN";
 
         try {
             if (predictions[0].bbox[0]){
                 let x = predictions[0].bbox[0];
-
                 if (x < 80){
-                    document.getElementById('salud').classList.add('BigLetter');
+                    document.getElementById('salud').innerHTML = "<ul>\n" +
+                        "<li>OMS</li>\n" +
+                        "<li>RECOMENDACIONES</li>\n" +
+                        "<li>CORONAVIRUS</li>\n" +
+                        "</ul>";
                 } else if (x > 80 && x < 200){
-                    document.getElementById('tramites').classList.add('BigLetter');
+                    document.getElementById('tramites').innerHTML = "<ul>\n" +
+                        "<li>Afiliación</li>\n" +
+                        "<li>Seguro voluntario</li>" +
+                        "</ul>";
+
                 } else if (x > 200 && x < 350){
-                    document.getElementById('informacion').classList.add('BigLetter');
+                    document.getElementById('informacion').innerHTML = "<ul>\n" +
+                        "<li>Extranjeros</li>\n" +
+                        "<li>Nacionales</li>" +
+                        "</ul>";
                 }
             }
         } catch (error){
