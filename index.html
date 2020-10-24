@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track hands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="mb10">
+    <button id="toggleButton" class="toggleButton"> Toggle video</button>
+    <div id="updatenote" class="updatenote mt10">
+        Loading Model...
+    </div>
+</div>
+
+<div>
+    <video class=" videobox canvasbox" id="video"></video>
+    <canvas id="canvas" class="border canvasbox"></canvas>
+
+    <div>
+        <h3 id="salud">Salud</h3>
+        <h3 id="tramites">Trámites</h3>
+        <h3 id="informacion">Información</h3>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
+<script src="app.js"></script>
+
+<body>
+
+</body>
+</html>
