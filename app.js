@@ -53,17 +53,22 @@ function rundetection(){
         document.getElementById('tramites').classList.remove('BigLetter');
         document.getElementById('informacion').classList.remove('BigLetter');
 
-        if (predictions[0].bbox[0]){
-            let x = predictions[0].bbox[0];
+        try {
+            if (predictions[0].bbox[0]){
+                let x = predictions[0].bbox[0];
 
-            if (x < 80){
-                document.getElementById('salud').classList.add('BigLetter');
-            } else if (x > 80 && x < 200){
-                document.getElementById('tramites').classList.add('BigLetter');
-            } else if (x > 200 && x < 350){
-                document.getElementById('informacion').classList.add('BigLetter');
+                if (x < 80){
+                    document.getElementById('salud').classList.add('BigLetter');
+                } else if (x > 80 && x < 200){
+                    document.getElementById('tramites').classList.add('BigLetter');
+                } else if (x > 200 && x < 350){
+                    document.getElementById('informacion').classList.add('BigLetter');
+                }
             }
+        } catch (error){
+            console.error(error);
         }
+
         if (isVideo){
             requestAnimationFrame(rundetection);
         }
