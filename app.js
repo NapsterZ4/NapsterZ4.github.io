@@ -1,3 +1,4 @@
+// Variables for show video from webcam and video from handTrack.js API
 const video = document.getElementById('video');
 const canvas = document.getElementById('Mycanvas');
 const context = canvas.getContext('2d');
@@ -7,6 +8,8 @@ toggleButton.disabled = true;
 
 let updatenote = document.getElementById('updatenote');
 
+
+// Model parameters for pre-trained models from handTrack.js API
 const modelParams = {
     flipHorizontal: true,   // flip e.g for video
     imageScaleFactor: 0.7,  // reduce input image size for gains in speed.
@@ -15,6 +18,7 @@ const modelParams = {
     scoreThreshold: 0.79,    // confidence threshold for predictions.
 }
 
+// Variables for activate video and model
 let isVideo = false;
 let model = null;
 
@@ -22,6 +26,8 @@ toggleButton.addEventListener("click", function (){
    toggleVideo();
 });
 
+
+// Function for detect and starting video
 function toggleVideo(){
     if (!isVideo){
         updatenote.innerText = 'Starting video...';
@@ -34,6 +40,7 @@ function toggleVideo(){
     }
 }
 
+// Function for start video from handtrack detection
 function startVideo(){
     handTrack.startVideo(video).then(function (status){
         if (status){
@@ -46,6 +53,8 @@ function startVideo(){
     })
 }
 
+// Function for detection hands and extract predictions for have interaction with menu and sub menu with movement of
+// hands from right to left in web page
 function rundetection(){
     model.detect(video).then(predictions => {
         model.renderPredictions(predictions, canvas, context, video);
@@ -85,6 +94,7 @@ function rundetection(){
     })
 }
 
+// Call model from API
 handTrack.load(modelParams).then(lmodel => {
     model = lmodel;
     updatenote.innerText = 'Deep learning model is loaded!';
