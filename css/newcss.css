@@ -5,3 +5,11 @@
 .carrers_box{
     position: relative;
 }
+
+.logo{
+    max-width: 10% !important;
+}
+
+h2{
+    line-height: 100px;
+}
