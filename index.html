@@ -53,7 +53,7 @@
 <!-- Navigation End  -->
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<section class="main-banner" style="background:#242c36 url(img/costa_rica_green.jpeg) no-repeat">
+<section class="main-banner" style="background:#242c36 url(img/san_jose_costa_rica.jpg) no-repeat">
     <div class="container">
         <div class="caption">
             <h2>Build Your Career in Costa Rica</h2>
@@ -102,7 +102,54 @@
         <div class="row heading">
             <h2>Most sought-after jobs in Costa Rica</h2>
             <div class="carrers_box">
-                <img src="img/carrers_costa_rica.png" class="carrers">
+                <canvas id="myChart2" width="400" height="200">
+
+                </canvas>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+                <script>
+                    var ctx = document.getElementById('myChart2').getContext('2d');
+                    var densityData = {
+                        label: '2019',
+                        data: [5427, 5243, 5514, 3933, 1326, 687, 1271, 1638],
+                        backgroundColor: 'rgba(0, 99, 132, 0.6)',
+                        borderColor: 'rgba(0, 99, 132, 1)',
+                        yAxisID: "y-axis-density"
+                    };
+
+                    var gravityData = {
+                        label: '2020',
+                        data: [2200, 4000, 5500, 2598, 4356, 600, 900, 589],
+                        backgroundColor: 'rgba(99, 132, 0, 0.6)',
+                        borderColor: 'rgba(99, 132, 0, 1)',
+                        yAxisID: "y-axis-gravity"
+                    };
+
+                    var planetData = {
+                        labels: ["Computer Science", "Electrical Engineer", "Software Developer", "Accounting", "Rural Turism",
+                            "IT Networking", "Secretary", "ECommerce Developer"],
+                        datasets: [densityData, gravityData]
+                    };
+
+                    var chartOptions = {
+                        scales: {
+                            xAxes: [{
+                                barPercentage: 1,
+                                categoryPercentage: 0.6
+                            }],
+                            yAxes: [{
+                                id: "y-axis-density"
+                            }, {
+                                id: "y-axis-gravity"
+                            }]
+                        }
+                    };
+
+                    var barChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: planetData,
+                        options: chartOptions
+                    });
+                </script>
             </div>
         </div>
     </div>
@@ -114,8 +161,6 @@
             <div class="features-content">
                 <span class="box1"><span aria-hidden="true" class="icon-dial"></span></span>
                 <h3>Create An Account</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et
-                    dolore magna aliqua.</p>
             </div>
         </div>
 
@@ -123,8 +168,6 @@
             <div class="features-content">
                 <span class="box1"><span aria-hidden="true" class="icon-search"></span></span>
                 <h3>Search Desired Job</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et
-                    dolore magna aliqua.</p>
             </div>
         </div>
 
@@ -132,8 +175,6 @@
             <div class="features-content">
                 <span class="box1"><span aria-hidden="true" class="icon-printer"></span></span>
                 <h3>Send Your Resume</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et
-                    dolore magna aliqua.</p>
             </div>
         </div>
 
@@ -180,7 +221,6 @@
     <div class="container">
         <div class="row heading">
             <h2>Find Popular Jobs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
         </div>
         <div class="companies">
             <div class="company-list">
@@ -312,13 +352,10 @@
             <h4>Reach Us</h4>
             <address>
                 <ul>
-                    <li>1201, Murakeu Market, QUCH07<br>
-                        United Kingdon
+                    <li>1201, Alajuela, Costa Rica<br>
                     </li>
-                    <li>Email: Support@job.com</li>
-                    <li>Call: 044 123 458 65879</li>
-                    <li>Skype: job@skype</li>
-                    <li>FAX: 123 456 85</li>
+                    <li>Email: Support@jobscostarica.com</li>
+                    <li>Call: +506 25592456</li>
                 </ul>
             </address>
         </div>
